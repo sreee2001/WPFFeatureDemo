@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpfFeatureDemo="clr-namespace:WpfFeatureDemo"
         mc:Ignorable="d"
         WindowStyle="None"
         AllowsTransparency="False"
@@ -12,19 +13,9 @@
         MouseDown="MainWindow_OnMouseDown"
         Title="WPF Features Demo" Height="300" Width="400">
     <Window.Resources>
-        <Style TargetType="{x:Type Button}" x:Key="TitleBarButtonStyle">
-            <Setter Property="Width" Value="30"/>
-            <Setter Property="Height" Value="20"/>
-        </Style>
     </Window.Resources>
     <DockPanel x:Name="RootWindow">
-        <DockPanel x:Name="TitleBar" DockPanel.Dock="Top">
-            <Button ToolTip="CloseButton" DockPanel.Dock="Right" Command="{Binding CloseCommand}" Content="X" Style="{StaticResource TitleBarButtonStyle}"/>
-            <Button ToolTip="MaximizeButton" DockPanel.Dock="Right" Command="{Binding MaximizeCommand}" Content="O" Style="{StaticResource TitleBarButtonStyle}"/>
-            <Button ToolTip="MinimizeButton" DockPanel.Dock="Right" Command="{Binding MinimizeCommand}" Content="-" Style="{StaticResource TitleBarButtonStyle}"/>
-            
-            <TextBlock Text="Wpf Features Demo" HorizontalAlignment="Center"/>
-        </DockPanel>
+        <wpfFeatureDemo:TitleBar DockPanel.Dock="Top"/>
         <ContentControl Content="{Binding CurrentPage}"/>
     </DockPanel>
 </Window>
