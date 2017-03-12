@@ -4,8 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="WPF Features Demo" Height="600" Width="800">
-    <Grid>
-        <TextBlock Text="A demo application where I will be showcasing different controls of wpf"/>
-    </Grid>
+        Title="WPF Features Demo" Height="600" Width="800"
+        ResizeMode="CanResize"
+        ShowInTaskbar="True"
+        SizeToContent="WidthAndHeight"
+        Topmost="False"
+        WindowStartupLocation="Manual"
+        WindowState="Normal"
+        >
 </Window>
